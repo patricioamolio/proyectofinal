@@ -1,0 +1,262 @@
+/* Fuentes del sitio */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@300&display=swap');
+
+/* Reset */
+*{
+    /*Margin, espacio exterior */
+    margin: 0;
+    /*Padding, espacio interno */
+    padding: 0;  
+    /* hacerme una suma entre padding, border, ancho y alto */
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* =========================================================== */
+/* estilos generales */
+
+header{
+    margin-bottom: 20px;
+    background-color: rgb(255,194,212,255);
+}
+
+body{
+    background-color: #f7baf2;
+}
+
+h2{
+    color: chocolate;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h3{
+    font-weight: bold;
+    color: #EC2467;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* =========================================================== */
+/* tambaño del logo y ubicación */
+.logo{
+    margin-top: 10px;
+    padding: 20pk;
+    height: 60px;
+}
+
+/* configuración del menu de navegación */
+.menu{
+    display: inline-block;
+    
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+/* =========================================================== */
+/* Promoción del día */
+    /* configurar contenedor */
+    .contenedor{
+    width: 10pk 90%;
+    margin: 10px 20%;
+    background-color: pink; 
+    display: flex;
+    flex-direction: column;
+    }
+
+    /* ubicación de la foto */
+    section .promocion_foto img{
+        width: 90%;
+        
+    }
+
+    section .promocion_foto{
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+
+
+
+    /* configuración texto de la promoción del día*/
+    .promocion{
+    /*    width: 400px;
+        height: auto; */
+        text-align: center;
+        padding: 20px;
+        margin: 1rem 0 0 0;
+        position: relative;
+        bottom: 10px;
+    }
+
+    /* convertir bloques en linea 
+    Section div{
+        display: inline-block;
+    }*/
+
+/* =============================================== */
+
+/* Listado de productos */
+
+
+main{
+    margin: 1rem 3rem 1rem 1rem;
+}
+main div .bloque{
+    text-align: center;
+    
+}
+
+
+main div div div img{
+    width: 70%;
+}
+/* contactos */
+
+main div div div div{
+    margin-top: 1rem;
+}
+/* establecer estructura de formulario para el grid */
+/*
+main .contenedor-formulario{
+    background-color: aqua;
+}
+*/
+
+main div .formulario{
+    margin-top: 1rem;
+   /* background-color: #EC2467;  */
+}
+main div .formulario div{
+    margin: 1rem;
+}
+main div .contenedor-ubicacion{
+    margin-top: 1rem;
+   /* background-color: #646363;  */
+}
+
+
+main div .ubicacion .mapa{
+    margin-top: 1rem;
+    width: 95%;
+}
+/* ============================================== */
+
+/* Footer */
+
+footer{
+    margin: 5px;
+    text-align: center;
+}
+
+.item-fixed{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+/* ======================================= */
+/* varios */
+
+.precio{
+    font-weight: bold;
+}
+
+.contenedor-hisoria-dos{
+    margin-top: 1rem;
+}
+/*Media Query */
+
+@media screen and (min-width:1024px) {
+    header{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .bloque{
+        /* background-color: aquamarine; */
+        margin: 10px;
+        width: 20%;
+        display: inline-block; 
+        text-align: center;
+    }
+
+    section{
+        width: 40%;
+    }
+    /* pagina promociones*/
+    main .contenedor-promocion{
+        display: flex;
+        gap: 1rem;
+        margin: 1rem;
+    } 
+    /* pagina promociones*/
+
+    main .contenedor-hisoria{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+        grid-template-areas: 
+        "imguno textuno"
+        "textdos imgdos";      
+        
+        align-items: center;
+    }
+
+    main div .historia-uno {
+        grid-area: textuno;
+        margin-bottom: 1rem;
+
+    }
+
+    main div .historia-foto-uno {
+        grid-area: imguno;
+        margin-bottom: 1rem;
+        text-align: center;
+
+    }    
+
+    main div .historia-dos {
+            grid-area: textdos;
+            margin-bottom: 1rem;
+
+    }   
+
+    main div .historia-foto-dos {
+        grid-area: imgdos;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    /* pagina de contacto */
+    main .form-general{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: (1, 1fr);
+
+        grid-template-areas: 
+        "frm mapa";      
+        
+    }
+
+    main div .formulario{
+        grid-area: frm;
+        margin-bottom: 1rem;
+
+    }
+
+    main div .contenedor-ubicacion{
+        grid-area: mapa;
+        margin-bottom: 1rem;
+
+    }
+
+    main div .ubicacion .mapa{
+        margin-top: 1rem;
+        height: 200px;
+    }
+}

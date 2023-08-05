@@ -1,0 +1,341 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@300&display=swap");
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif; }
+
+/* estilos generales */
+header {
+  margin-bottom: 20px;
+  background-color: #ffc2d4; }
+
+body {
+  background-color: #DFD4CE; }
+
+.Promocion-principal {
+  width: 0 90%;
+  margin: 10px 20%;
+  text-align: center; }
+
+h1 {
+  color: chocolate;
+  font-size: 25px;
+  font-weight: bold; }
+
+h3 {
+  font-weight: bold;
+  font-size: 23px; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+.precio {
+  font-weight: bold; }
+
+footer {
+  text-align: center; }
+  footer .ws {
+    position: fixed;
+    bottom: 0;
+    right: 0; }
+
+/* box de productos Pagina Principal*/
+.bloque {
+  display: inline-block;
+  text-align: center;
+  border-style: hidden;
+  border-radius: 3%;
+  margin: 5% 5% 2% 5%;
+  background-color: #A9CEA3; }
+
+/* box de productos en Promoción */
+.contenedor-promocion {
+  display: inline-block;
+  text-align: center;
+  border-style: hidden;
+  border-radius: 3%;
+  margin: 5% 5% 2% 5%;
+  background-color: #A9CEA3;
+  padding-top: 2%; }
+  .contenedor-promocion .foto-promo {
+    margin-bottom: 2%; }
+
+/* características por tipo de productos */
+.titulo {
+  margin-left: 5%;
+  margin-top: 20px; }
+
+.bloque-torta {
+  background-color: #A9CEA3; }
+
+.bloque-tarta {
+  background-color: #E27667; }
+
+.bloque-pastel {
+  background-color: #FDC2AB; }
+
+/* box de nuestra historia */
+.contenedor-hisoria {
+  display: inline-block;
+  text-align: center;
+  border-style: hidden;
+  border-radius: 3%;
+  margin: 5% 5% 5% 5%;
+  background-color: #A9CEA3;
+  padding-top: 2%; }
+  .contenedor-hisoria .foto-historia-foto-uno {
+    margin-bottom: 5%; }
+  .contenedor-hisoria .foto-historia-foto-dos {
+    margin-bottom: 5%; }
+  .contenedor-hisoria .foto-historia {
+    width: 90%; }
+
+.form-general {
+  display: inline-block;
+  border-style: hidden;
+  border-radius: 3%;
+  margin: 5% 5% 5% 5%;
+  background-color: #A9CEA3; }
+  .form-general .formulario {
+    margin-top: 1rem;
+    padding: 10px; }
+  .form-general .contenedor-ubicacion {
+    margin-top: 1rem;
+    padding: 10px; }
+    .form-general .contenedor-ubicacion .mapa {
+      border-radius: 3%; }
+
+/*Media Query */
+@media screen and (min-width: 768px) {
+  .productos {
+    display: flex; }
+  .foto-prod {
+    width: 100%; }
+  header {
+    font-size: 20px;
+    font-weight: bold; }
+    header nav div div ul li {
+      padding: 1rem; }
+  .bloque {
+    /* background-color: aquamarine; */
+    margin: 10px;
+    width: 20%;
+    display: inline-block;
+    /*text-align: center;*/ }
+    .bloque .foto-prod {
+      size: 50%; }
+  /* Promoción del día */
+  /* configurar contenedor */
+  .contenedor {
+    width: 50%;
+    margin: 1rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+  /* .promo-general{
+        display: flex;
+    }
+    .contenedor-promocion{
+        
+        display: inline-block;
+        
+    }*/
+  .promocion-lista {
+    margin-left: 2rem; }
+  .carousel-caption {
+    background-color: rgba(255, 174, 108, 0.5);
+    margin-left: 100px;
+    margin-right: 100px;
+    color: #000000;
+    font-weight: bold; }
+    .carousel-caption h5 {
+      font-weight: bold; }
+  section {
+    width: 40%; }
+  /* Estilo para el contenedor destacado */
+  main .contenedor-hisoria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "imguno textuno" "textdos imgdos";
+    align-items: center; }
+  main div .historia-uno {
+    grid-area: textuno;
+    margin-bottom: 1rem; }
+  main div .historia-foto-uno {
+    grid-area: imguno;
+    margin-bottom: 1rem;
+    text-align: center; }
+  main div .historia-dos {
+    grid-area: textdos;
+    margin-bottom: 1rem; }
+  main div .historia-foto-dos {
+    grid-area: imgdos;
+    margin-bottom: 1rem;
+    text-align: center; }
+  /* pagina de contacto */
+  main .form-general {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1, 1fr;
+    grid-template-areas: "frm mapa"; }
+  main div .formulario {
+    grid-area: frm;
+    margin-bottom: 1rem; }
+  main div .contenedor-ubicacion {
+    grid-area: mapa;
+    margin-bottom: 1rem; }
+  main div .ubicacion .mapa {
+    margin-top: 1rem;
+    height: 200px; } }
+
+/* Resetear los márgenes y padding para asegurarnos de que no hay espacios innecesarios */
+body, main, section, div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* Estilo para el contenedor destacado */
+.contenedor {
+  width: 30%;
+  margin: 1rem auto 2rem auto;
+  /* Establece los márgenes izquierdo y derecho en "auto" para centrar horizontalmente */ }
+
+/* Agrega otros estilos que desees para el contenido dentro del contenedor */
+/* Por ejemplo, ajustar el fondo, color de texto, etc. */
+.contenedor {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 20px;
+  justify-content: center;
+  /* Centrar verticalmente el contenido */
+  text-align: center;
+  /* Centrar horizontalmente el contenido */ }
+
+/* Estilo para el resto del contenido */
+.contenedor-bloque {
+  width: 100%;
+  /* Asegurarse de que los contenedores secundarios tengan un ancho del 100% */
+  margin: 0 auto; }
+
+@media screen and (min-width: 1024px) {
+  .productos {
+    display: flex; }
+  .foto-prod {
+    width: 100%; }
+  header {
+    font-size: 20px;
+    font-weight: bold; }
+    header nav div div ul li {
+      padding: 1rem; }
+  .bloque {
+    /* background-color: aquamarine; */
+    margin: 10px;
+    width: 20%;
+    display: inline-block;
+    /*text-align: center;*/ }
+    .bloque .foto-prod {
+      size: 50%; }
+  /* Promoción del día */
+  /* configurar contenedor */
+  .contenedor {
+    width: 50%;
+    margin: 1rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+  /* .promo-general{
+        display: flex;
+    }
+    .contenedor-promocion{
+        
+        display: inline-block;
+        
+    }*/
+  .promocion-lista {
+    margin-left: 2rem; }
+  .carousel-caption {
+    background-color: rgba(255, 174, 108, 0.5);
+    margin-left: 100px;
+    margin-right: 100px;
+    color: #000000;
+    font-weight: bold; }
+    .carousel-caption h5 {
+      font-weight: bold; }
+  section {
+    width: 40%; }
+  /* Estilo para el contenedor destacado */
+  main .contenedor-hisoria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "imguno textuno" "textdos imgdos";
+    align-items: center; }
+  main div .historia-uno {
+    grid-area: textuno;
+    margin-bottom: 1rem; }
+  main div .historia-foto-uno {
+    grid-area: imguno;
+    margin-bottom: 1rem;
+    text-align: center; }
+  main div .historia-dos {
+    grid-area: textdos;
+    margin-bottom: 1rem; }
+  main div .historia-foto-dos {
+    grid-area: imgdos;
+    margin-bottom: 1rem;
+    text-align: center; }
+  /* pagina de contacto */
+  main .form-general {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1, 1fr;
+    grid-template-areas: "frm mapa"; }
+  main div .formulario {
+    grid-area: frm;
+    margin-bottom: 1rem; }
+  main div .contenedor-ubicacion {
+    grid-area: mapa;
+    margin-bottom: 1rem; }
+  main div .ubicacion .mapa {
+    margin-top: 1rem;
+    height: 200px; } }
+
+/* Resetear los márgenes y padding para asegurarnos de que no hay espacios innecesarios */
+body, main, section, div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* Estilo para el contenedor destacado */
+.contenedor {
+  width: 30%;
+  margin: 1rem auto 2rem auto;
+  /* Establece los márgenes izquierdo y derecho en "auto" para centrar horizontalmente */ }
+
+/* Agrega otros estilos que desees para el contenido dentro del contenedor */
+/* Por ejemplo, ajustar el fondo, color de texto, etc. */
+.contenedor {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 20px;
+  justify-content: center;
+  /* Centrar verticalmente el contenido */
+  text-align: center;
+  /* Centrar horizontalmente el contenido */ }
+
+/* Estilo para el resto del contenido */
+.contenedor-bloque {
+  width: 100%;
+  /* Asegurarse de que los contenedores secundarios tengan un ancho del 100% */
+  margin: 0 auto; }
